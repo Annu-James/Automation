@@ -32,7 +32,7 @@ public class Table_Handling extends Base_1{
 	{
 		driver.navigate().to("https://selenium.qabible.in/table-pagination.php");
 		String inputData="Software Engineer";
-		List<WebElement> searchEle=driver.findElements(By.xpath("//table[@id='dtBasicExample']/tbody/tr[10]/td[2]"));
+		List<WebElement> searchEle=driver.findElements(By.xpath("//table[@id='dtBasicExample']/tbody/tr/td[2]"));
 		for(WebElement element:searchEle)
 		{
 			if(element.getText().equals(inputData))
