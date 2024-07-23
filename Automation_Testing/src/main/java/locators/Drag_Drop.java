@@ -15,7 +15,6 @@ WebElement drag1=driver.findElement(By.xpath("//span[text()='Draggable n°1']"))
 WebElement drop=driver.findElement(By.id("mydropzone"));
 Actions actions=new Actions(driver);
 actions.dragAndDrop(drag1, drop).perform();
-
 }
 
 	public static void main(String[] args) {

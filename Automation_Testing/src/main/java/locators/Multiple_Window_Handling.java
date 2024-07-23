@@ -24,16 +24,16 @@ public class Multiple_Window_Handling {
 	
 	String parentName=driver.getWindowHandle();
 	System.out.println(parentName);
-	
+
 	Set<String> allWindow=driver.getWindowHandles();
-	String title="";
+	String title=" ";
 	for(String temp:allWindow)
 	{
 		if(!temp.equals(parentName))
 		{
 		System.out.println("All Windows "+ temp);
 		driver.switchTo().window(temp);
-		//System.out.println(driver.getTitle());
+		System.out.println(driver.getTitle());
 		title=driver.getTitle();
 		}
 		if(title.equals("WebDriver | Contact Us"))
@@ -52,8 +52,7 @@ public class Multiple_Window_Handling {
 			user.sendKeys("Abcde");
 			WebElement password=driver.findElement(By.xpath("//input[@id='password']"));
 			password.sendKeys("123abc");
-			WebElement login1=driver.findElement(By.xpath("//button[@id='login-button']"));
-			login1.click();
+			
 		}
 		driver.switchTo().window(parentName);
 	}
