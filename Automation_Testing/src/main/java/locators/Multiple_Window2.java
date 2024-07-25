@@ -25,6 +25,9 @@ public class Multiple_Window2 {
 		WebElement toDo=driver.findElement(By.xpath("//a[@href='To-Do-List/index.html']"));
 		toDo.click();
 
+		WebElement button=driver.findElement(By.xpath("//a[@id='button-clicks']"));
+		button.click();
+		
 		Set<String> child=driver.getWindowHandles();
 		String title="";
 		for(String ch:child)
@@ -48,6 +51,12 @@ public class Multiple_Window2 {
 				WebElement drop=driver.findElement(By.xpath("//div[@id='droppable']"));
 				Actions dragNDrop=new Actions(driver);
 				dragNDrop.dragAndDrop(drag, drop).perform();
+			} 
+			if(title.equals("WebDriver | Button Clicks"))
+			{
+				WebElement elementClick=driver.findElement(By.xpath("//span[@id='button1']"));
+				elementClick.click();
+				driver.switchTo().alert().dismiss();
 			}
 		}
 		

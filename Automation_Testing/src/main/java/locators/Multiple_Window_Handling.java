@@ -29,6 +29,7 @@ public class Multiple_Window_Handling {
 	String title=" ";
 	for(String temp:allWindow)
 	{
+		//System.out.println(temp);
 		if(!temp.equals(parentName))
 		{
 		System.out.println("All Windows "+ temp);
