@@ -34,8 +34,8 @@ public class Multiple_Window2 {
 		{
 			if(!ch.equals(parent1))
 			{
-				System.out.println(ch);
 				driver.switchTo().window(ch);
+				System.out.println(ch);
 				System.out.println(driver.getTitle());
 				title=driver.getTitle();
 			}
@@ -47,7 +47,7 @@ public class Multiple_Window2 {
 			}
 			if(title.equals("WebDriver | Actions"))
 			{
-				WebElement drag=driver.findElement(By.xpath("//b[text()='DRAG ME TO MY TARGET!']"));
+				WebElement drag=driver.findElement(By.xpath("//div[@id='draggable']"));
 				WebElement drop=driver.findElement(By.xpath("//div[@id='droppable']"));
 				Actions dragNDrop=new Actions(driver);
 				dragNDrop.dragAndDrop(drag, drop).perform();

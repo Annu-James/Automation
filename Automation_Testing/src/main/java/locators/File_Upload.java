@@ -19,6 +19,7 @@ file.sendKeys("C:\\Users\\jeffk\\OneDrive\\Desktop\\Jeff\\Car RC Book.pdf");
 
 WebElement upload=driver.findElement(By.xpath("//input[@id='file-submit']"));
 upload.click();
+
 }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
